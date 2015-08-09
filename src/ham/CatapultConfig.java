@@ -6,8 +6,6 @@ public interface CatapultConfig {
 	public void setAngle(float angle);
 	public void setIsLoaded(boolean isLoaded);
 	public boolean setShoot(boolean shoot);
-	public void  isHit(int rand);
-//	public int getHit();
 	public void fire();
 	public float getAngle();
 	public void reload();
@@ -16,6 +14,7 @@ public interface CatapultConfig {
 	public int getCurArmor();
 	public int setdamage(int curHealth,int curArmor, int damage);
 	public int setRandom();
+
 
 
 	

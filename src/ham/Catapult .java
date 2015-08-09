@@ -10,7 +10,7 @@ public class Catapult implements CatapultConfig{
 	private int curHealth = 200;
 	private int curArmor = 100;
 	private int rand;
-	private int total;
+
 	
 	
 	
@@ -55,26 +55,26 @@ public class Catapult implements CatapultConfig{
 		System.out.println("Reload!!");
 	}
 
-	@Override
-	public void isHit(int rand) {
-		this.rand=rand;
-		if(rand%2==0){
-			System.out.println(" hit");
-			
-		}
-		else{
-			System.out.println(" miss");
-			
-		}
-		
-	}
+//	@Override
+//	public void isHit(int rand) {
+//		this.rand=rand;
+//		if(rand%2==0){
+//			didHit();
+//			
+//		}
+//		else{
+//			System.out.println(" miss");
+//			
+//		}
+//		
+//	}
 	public int setRandom() {
 		rand = (int) Math.ceil(Math.random()*100);
 		return this.rand;
 
 	}
 	
-	@Override
+@Override
 	public int getCurHealth() {
 		return this.curHealth;	
 	
@@ -84,30 +84,27 @@ public class Catapult implements CatapultConfig{
 		return this.curArmor;	
 	
 	}
-	
+
+
 
 
 
 	@Override
-	public int setdamage(int curHealth, int curArmor, int damage) {
+	public  int setdamage(int curHealth, int curArmor, int damage) {
 		 curArmor =  curArmor - damage;
-		curHealth = curHealth -(- curArmor);
+		 this.curArmor=curArmor;
 		
-		this.curHealth=curHealth;
-		this.curArmor=curArmor;
-
-		if(curHealth >0){
-
-			System.out.println("damn it we are taking damage, \n  Status Report!, \n  Damage recived: '"+ damage +"',\n the armor: '"+ curArmor+"',\n  & the health: "+ curHealth);
-
-			return total;
+		if(curArmor <=0){
+			
+			curHealth = curHealth -(- curArmor);
+			this.curHealth=curHealth;
+			System.out.println("Status Report!, \n  Damage Dealt: '"+ damage +"',\n the armor energy: '"+ curArmor+"',\n  & the current health: "+ curHealth);
 		}else{
-			System.out.println("you is manno!!!");
-			return 0;
-			}
-	
+			System.out.println("Status Report!, \n  Damage Dealt: '"+ damage +"',\n the armor energy: '"+ curArmor+"',\n  & the current health: "+ curHealth);
+				
 }
-
+		return damage;
+}
 
 
 }

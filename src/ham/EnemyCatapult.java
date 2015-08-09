@@ -1,20 +1,26 @@
 package ham;
 
-public class EnemyCatapult extends Catapult implements Inflamable{
+public class EnemyCatapult extends Catapult implements Flamable {
 
-	@Override
-	public boolean setInflamable(boolean inflamable) {
-		// TODO Auto-generated method stub
+	private boolean flamable;
+	
+	public EnemyCatapult() {
 		
-		if(inflamable == true){
-			System.out.println("you cant burn this,yo!");
-			return this.inflamable;
-		}else{
-			System.out.println("you can burn this");
-			return this.inflamable;
-			}
-		
+		System.out.println(this+": configured, and ready to go");
+		this.setFlamability(false);// every enemy catapult is inflammable, unless specifically set otherwise.
 	}
 
+	@Override
+	public void setFlamability(boolean flamability) {
+		this.flamable = flamability;
+
+	}
+
+	@Override
+	public boolean isFlamable() {
+		return this.flamable;
+	}
+	
+	
+
 }
- 

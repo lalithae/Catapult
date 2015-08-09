@@ -55,19 +55,7 @@ public class Catapult implements CatapultConfig{
 		System.out.println("Reload!!");
 	}
 
-//	@Override
-//	public void isHit(int rand) {
-//		this.rand=rand;
-//		if(rand%2==0){
-//			didHit();
-//			
-//		}
-//		else{
-//			System.out.println(" miss");
-//			
-//		}
-//		
-//	}
+
 	public int setRandom() {
 		rand = (int) Math.ceil(Math.random()*100);
 		return this.rand;

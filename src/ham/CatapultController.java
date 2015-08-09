@@ -12,7 +12,7 @@ public class CatapultController {
 	System.out.println("Note:Catapult 2 is Inflamable.");
 	cat2.setInflamable(true);
 	System.out.println("Game Set!");
-		for(int count = 0; count < 3; count++){
+		for(int count = 0; count <30; count++){
 			
 			if( count%2==0 ){
 				System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");

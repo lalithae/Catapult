@@ -1,0 +1,25 @@
+package ham;
+
+public interface ICatapult {
+
+	public void setAngle(float angle);
+
+	public void setIsLoaded(boolean isLoaded);
+
+	public void fire();
+
+	public float getAngle();
+
+	public void reload();
+
+	public void didHit();
+
+	public int getCurHealth();
+
+	public int getCurArmor();
+
+	public int setdamage(int curHealth, int curArmor, int damage);
+	
+	public boolean isFlamable();
+
+}

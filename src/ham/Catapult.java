@@ -1,5 +1,7 @@
 package ham;
 
+import java.util.Scanner;
+
 public class Catapult implements ICatapult {
 
 	private float angle;
@@ -7,16 +9,26 @@ public class Catapult implements ICatapult {
 	protected boolean flamable = true;
 	private int curHealth = 200;
 	private int curArmor = 100;
-
+	private int damage;
+	private String ammoType;
+	Scanner input = new Scanner(System.in);
+	
+	
 	public Catapult() {
 	}
 
+	public int getDamage(){
+		return this.damage;
+	}
+	
 	public void setAngle(float angle) {
 		this.angle = angle;
 	}
 
 	public float getAngle() {
+		System.out.println(angle);
 		return this.angle;
+	
 	}
 
 	public boolean isLoaded() {
@@ -77,6 +89,54 @@ public class Catapult implements ICatapult {
 	public boolean isFlamable() {
 		return this.flamable;
 	}
+
+	@Override
+	public void setAmmoType(String ammoType) {
+		this.ammoType = ammoType;
+		switch (ammoType){
+		case "wood":
+			System.out.println("you chose ammo type : "+ ammoType);
+			this.damage = 30;
+			break;
+		case "stone":
+			System.out.println("you chose ammo type : "+ ammoType);
+			this.damage= 75;
+			break;
+		case "motar":
+			System.out.println("you chose ammo type : "+ ammoType);
+			this.damage= 95;
+			break;
+		default :
+			System.out.println("pleas enter the god dam options, you blind bat, im not an ace programmer to promp you to chose again, re-run smarty pants");
+			
+		break;
+		}
+	}
+		
+
+	@Override
+	public String getAmmoType() {
+		System.out.println(ammoType);
+		return this.ammoType;
+		
+	}
+
+	@Override
+	public String getStringInput() {
+		String ammoType = input.nextLine();
+		
+		return ammoType;
+	}
+
+	@Override
+	public float getNumericalInput() {
+		float angle = input.nextFloat();
+		// TODO Auto-generated method stub
+		return angle;
+	}
+
+
+
 
 
 }

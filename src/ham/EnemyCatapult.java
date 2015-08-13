@@ -4,6 +4,7 @@ public class EnemyCatapult extends Catapult implements Flamable {
 
 	private boolean flamable;
 	
+	
 	public EnemyCatapult() {
 		
 		System.out.println(this+": configured, and ready to go");
@@ -21,6 +22,7 @@ public class EnemyCatapult extends Catapult implements Flamable {
 		return this.flamable;
 	}
 	
-	
 
 }
+
+

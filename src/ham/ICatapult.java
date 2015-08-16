@@ -1,6 +1,8 @@
 package ham;
 
-public interface ICatapult extends Ammo {
+public interface ICatapult  {
+
+
 
 	public void setAngle(float angle);
 
@@ -18,7 +20,7 @@ public interface ICatapult extends Ammo {
 
 	public int getCurArmor();
 	
-	public int getDamage();
+//	public int getDamage();
 
 	public int setdamage(int curHealth, int curArmor, int damage);
 	
@@ -26,9 +28,11 @@ public interface ICatapult extends Ammo {
 
 	public boolean isLoaded();
 	
-	public String getStringInput();
+//	public String batch();
 	
-	public float getNumericalInput();
+//	public String getStringInput();
+//	
+//	public float getNumericalInput();
 
 
 

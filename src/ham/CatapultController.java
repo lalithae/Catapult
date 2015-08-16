@@ -19,12 +19,9 @@ public class CatapultController {
 		mc.setAngle(angle);
 		System.out.println("Angle set to:\n"+ mc.getAngle());
 		
-		while(ec.getCurHealth()>=0){
-			
-	
+		while(ec.getCurHealth()>=0)
 			ec.setdamage(ec.getCurHealth(), ec.getCurArmor(), ammo.getDamage());
 	
-		}
 		
 		
 		

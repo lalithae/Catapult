@@ -9,10 +9,7 @@ public class Catapult implements ICatapult {
 	protected boolean flamable = true;
 	private int curHealth = 200;
 	private int curArmor = 100;
-	
 
-
-	
 	
 	public Catapult() {
 	}

@@ -17,12 +17,20 @@ public class CatapultController {
 		System.out.println("Pleas Set the angle of the catapult");
 		float angle = input.nextFloat();
 		mc.setAngle(angle);
-		System.out.println("Angle set to:\n"+ mc.getAngle());
-		
-		while(ec.getCurHealth()>=0)
-			ec.setdamage(ec.getCurHealth(), ec.getCurArmor(), ammo.getDamage());
-	
-		
+
+		for(int i = 1 ; ec.getCurHealth() >= 0; i++){
+			System.out.println("------------------------------------------------------------------------------------------------");
+			System.out.println("attack number :"+ i);
+				System.out.println("Hold angle at:"+ mc.getAngle());
+				
+				mc.setIsLoaded(true);
+				mc.fire();
+				ec.setdamage(ec.getCurHealth(), ec.getCurArmor(), ammo.getDamage());	
+				mc.didHit();
+				mc.reload();
+				System.out.println("------------------------------------------------------------------------------------------------");
+			
+		}
 		
 		
 	}

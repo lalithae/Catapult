@@ -27,10 +27,13 @@ public class CatapultController {
 				mc.fire();
 				ec.setdamage(ec.getCurHealth(), ec.getCurArmor(), ammo.getDamage());	
 				mc.didHit();
-				mc.reload();
+				if(ec.getCurHealth()>=0){
+					mc.reload();
+				}
 				System.out.println("------------------------------------------------------------------------------------------------");
 			
 		}
+		System.out.println("You have distroyed enemy catapult");
 		
 		
 	}

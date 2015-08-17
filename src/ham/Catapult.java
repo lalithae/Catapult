@@ -47,10 +47,16 @@ public class Catapult implements ICatapult {
 	}
 
 	public void reload() {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.out.println("Reload!!");
 	}
 
-	@Override
+
 	public int getCurHealth() {
 		return this.curHealth;
 
@@ -61,7 +67,7 @@ public class Catapult implements ICatapult {
 
 	}
 
-	@Override
+
 	public int setdamage(int curHealth, int curArmor, int damage) {
 		curArmor = curArmor - damage;
 		this.curArmor = curArmor;
@@ -82,7 +88,7 @@ public class Catapult implements ICatapult {
 		return damage;
 	}
 
-	@Override
+
 	public boolean isFlamable() {
 		return this.flamable;
 	}
